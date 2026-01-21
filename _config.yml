@@ -1,15 +1,3 @@
-# 網站基本設定
-title: 我的深度學習專題報告
-description: SqueezeNet 與 AlexNet 訓練實驗紀錄
 remote_theme: pages-themes/minimal@v0.2.0
-
-# 擴充功能設定：確保 HTML 表格能正確解析
-kramdown:
-  parse_block_html: true
-  syntax_highlighter: rouge
-
-# 排除不需要的文件
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
+title: " "
+description: " "
