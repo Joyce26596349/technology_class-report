@@ -2,6 +2,24 @@
 layout: default
 ---
 
+<style>
+    /* 1. 徹底隱藏側邊欄、頁首、以及底部的所有維護與主題資訊 */
+    header, aside, .sidebar, footer, .footer, #sidebar-content, .header-inner { 
+        display: none !important; 
+    }
+
+    /* 2. 讓報告內容區域滿版並置中，移除所有左側空白 */
+    .wrapper, section, .main-content {
+        max-width: 1000px !important;
+        margin: 0 auto !important;
+        padding: 40px 20px !important;
+        float: none !important;
+        width: 100% !important;
+    }
+</style>
+
+
+
 # 臺北市私立薇閣高級中學 114 學年度第 1 學期 工程專題
 ## 一、主題:
 <details open>
