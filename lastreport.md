@@ -33,11 +33,11 @@
   <tr>
     <td align="center">
       <div align="center"><b>Training option</b></div>
-      <img src="SqueezeNet_Option_截圖連結" width="100%">
+      <img src="https://github.com/user-attachments/assets/c849fb2c-0a58-4e83-b6d4-a604ec665ff0" height="200">
     </td>
     <td align="center">
       <div align="center"><b>Training option</b></div>
-      <img src="Alexnet_Option_截圖連結" width="100%">
+      <img src="https://github.com/user-attachments/assets/d1a4773e-c743-4cfd-8432-f1a5750febaa" height="200">
     </td>
     <td valign="top" style="white-space: nowrap;">
       <b>更改參數</b><br>
@@ -50,7 +50,7 @@
   <tr>
     <td colspan="3" align="center">
       <b>Squeezenet訓練曲線</b><br>
-      <img src="Squeezenet_Curve_連結" width="95%">
+      <img src="Squeezenet_Curve_連結" height="200">
     </td>
   </tr>
 </table>
@@ -80,13 +80,13 @@ title(string(label) + ", " + num2str(100*max(probs),3) + "%"); // 顯示類別�
 |SqueezeNet|AlexNet|
 |:--|:--|
 |<img src="https://github.com/user-attachments/assets/af0bf8f7-ba7e-4975-945b-5b2a35eb83aa" height="300"> | <img src="https://github.com/user-attachments/assets/ab4b77a8-bfc1-4489-8882-9ea4ba1a8bdc" height="300">|
-|成功|成功|
+|$\color{green}{\text{成功}}$|$\color{green}{\text{成功}}$|
 |<img src="https://github.com/user-attachments/assets/5f111314-6d78-4c23-b80f-9434726e152b" height="300">|<img src="https://github.com/user-attachments/assets/da13ed0b-a031-4201-9990-ff07564096ab" height="300">|
-|成功|成功|
+|$\color{green}{\text{成功}}$|$\color{green}{\text{成功}}$|
 |<img src="https://github.com/user-attachments/assets/130048f4-3c7c-4f6e-9694-3c7bb70d8967" height="300">|<img src="https://github.com/user-attachments/assets/f82da63f-8f38-41ce-99d1-f00bff1f3e44" height="300">|
-|成功|成功|
+|$\color{green}{\text{成功}}$|$\color{green}{\text{成功}}$|
 |<img src="https://github.com/user-attachments/assets/f117bb4c-201a-436a-bd5f-202de333dfa5" height="300"> | <img src="https://github.com/user-attachments/assets/24b6c266-f846-41a6-8f69-1088eb73ce36" height="300">|
-|成功|成功|
+|$\color{green}{\text{成功}}$|$\color{green}{\text{成功}}$|
 </details>
 </details>
 
