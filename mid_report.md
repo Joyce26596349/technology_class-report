@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # 工程專題期中報告 MATLAB程式設計
 ## 前言
 <details open>
