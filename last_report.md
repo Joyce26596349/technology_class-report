@@ -48,7 +48,6 @@ layout: default
 資料預處理+格式轉換 <img src="https://github.com/user-attachments/assets/0b95287e-81e0-4f3f-8119-3beed4750a6d" width="100"> 選擇批次轉換
 
 | 將詢問改為取代並選擇資料夾 | 加入轉換為全彩、調整大小將寬度與高度調成227 | 全選並選擇批次重新命名並更改命名範本、勾選副檔名 |
-
 | :--- | :--- | :--- |
 
 | <img src="https://github.com/user-attachments/assets/1daa2d1d-9fc5-45a8-bca7-3f30c733a067" width="259"> | <img src="https://github.com/user-attachments/assets/3903abe3-7886-42e8-a3b5-47ebda8b6a4b" width="235"> | <img src="https://github.com/user-attachments/assets/268fb8ef-41e0-448b-8e33-e9f24ca21417" width="298"> |
