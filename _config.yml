@@ -1,15 +1,6 @@
 title: 我的課程平台
 theme: jekyll-theme-architect
 
-# 修正解析問題：這能讓 ### 大綱 和 表格在 details 裡面正常顯示
 kramdown:
   parse_block_html: true
   syntax_highlighter: rouge
-
-collections:
-  matlab:
-    output: true
-    permalink: /matlab/:name
-  ai:
-    output: true
-    permalink: /ai/:name
