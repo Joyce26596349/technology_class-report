@@ -35,13 +35,13 @@ layout: default
 
 <a href="mid_report" class="card">
     <span class="card-title">📊 期中報告</span>
-    <span class="card-desc">matlab創意主題</span>
+    <span class="card-desc">結合了matlab和生程式AI的運用，並適用在實體創意主題上</span>
     <span class="btn-start">開始學習</span>
 </a>
 
 <a href="last_report" class="card">
     <span class="card-title">☁️ 期末報告</span>
-    <span class="card-desc">不同卷積神經訓練AI</span>
+    <span class="card-desc">使用 matlab 中 deep network designer 判斷出圖片中天空中不同雲朵的類型 </span>
     <span class="btn-start">開始學習</span>
 </a>
 
