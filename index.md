@@ -3,31 +3,35 @@ layout: default
 ---
 
 <style>
-    /* 1. 隱藏側邊欄與頁尾 */
+    /* 1. 徹底移除側邊欄，釋放所有右側空間 */
     aside#sidebar, footer, .view { display: none !important; }
     
-    /* 2. 頁面加寬至 1200px */
+    /* 2. 強制內容區塊橫向擴展，並移除主題的浮動限制 */
     section#main_content { 
         width: 100% !important; 
-        max-width: 1200px !important; 
+        max-width: 1300px !important; /* 加寬到 1300px */
         margin: 0 auto !important; 
         float: none !important; 
+        display: block !important;
+        padding: 40px 20px !important;
     }
 
-    /* 3. 按鈕容器：強制平分寬度 */
+    /* 3. 按鈕容器：強制橫向排列且不允許擠壓 */
     .card-container {
         display: flex;
-        gap: 30px;            /* 兩個框框之間的間距 */
+        gap: 30px;
         margin: 40px 0;
-        align-items: stretch; /* 高度對齊 */
         width: 100%;
+        justify-content: center;
+        flex-wrap: nowrap; /* 禁止換行 */
     }
 
-    /* 4. 卡片樣式：確保寬度 1:1 */
+    /* 4. 卡片樣式：鎖定寬度比例 */
     .card {
-        flex: 1 1 0;          /* 這是關鍵：強制兩個框框平分剩餘空間，寬度絕對一致 */
-        width: 0;             /* 防止內容撐開導致寬度不一 */
-        padding: 50px 40px;
+        /* flex: 1 0 45% 代表：平分空間、不允許縮小、基礎寬度為 45% */
+        flex: 1 0 45%; 
+        box-sizing: border-box;
+        padding: 50px 30px;
         border: 1px solid #e1e4e8;
         border-radius: 20px;
         background-color: #ffffff;
@@ -36,7 +40,7 @@ layout: default
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 380px;
+        min-height: 400px;
         transition: all 0.3s ease;
         box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
@@ -47,27 +51,27 @@ layout: default
         border-color: #007bff;
     }
 
-    /* 文字樣式優化 */
+    /* 標題與文字：防止變形 */
     .card-title { 
-        font-size: 2em; 
+        font-size: 2.2em; 
         font-weight: bold; 
         color: #007bff; 
         margin-bottom: 20px;
         display: block;
-        white-space: nowrap; /* 避免標題換行擠壓空間 */
+        min-width: 200px; /* 防止標題被擠壓 */
     }
     
     .card-desc { 
-        font-size: 1.15em; 
+        font-size: 1.2em; 
         color: #444; 
-        margin-bottom: 40px; 
+        margin-bottom: 30px; 
         line-height: 1.6;
-        word-wrap: break-word; /* 確保長文字會自動折行而不撐開框框 */
+        display: block;
     }
 
-    /* 5. 按鈕樣式 */
+    /* 5. 藍色按鈕樣式 */
     .btn-ui {
-        display: inline-block;
+        display: block;
         padding: 15px 0;
         width: 100%;           
         background-color: #007bff;
