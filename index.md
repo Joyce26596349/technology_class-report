@@ -3,68 +3,69 @@ layout: default
 ---
 
 <style>
-    /* 1. 隱藏右側欄位與 Architect 主題原本的頁尾資訊 */
+    /* 1. 隱藏側邊欄與頁尾 */
     aside#sidebar, footer, .view { display: none !important; }
     
-    /* 2. 極致加寬：將原本的寬度限制打開到 1200px */
+    /* 2. 頁面加寬至 1200px */
     section#main_content { 
-        width: 95% !important; 
+        width: 100% !important; 
         max-width: 1200px !important; 
         margin: 0 auto !important; 
         float: none !important; 
-        padding-top: 50px;
     }
 
-    /* 3. 按鈕容器：橫向並排佈局 */
+    /* 3. 按鈕容器：強制平分寬度 */
     .card-container {
         display: flex;
-        gap: 40px;            /* 增加兩個大框框之間的距離 */
-        margin: 20px 0;
-        justify-content: center;
-        align-items: stretch; /* 確保兩個框框高度永遠保持一致 */
+        gap: 30px;            /* 兩個框框之間的間距 */
+        margin: 40px 0;
+        align-items: stretch; /* 高度對齊 */
+        width: 100%;
     }
 
-    /* 4. 加大版框框（卡片）樣式 */
+    /* 4. 卡片樣式：確保寬度 1:1 */
     .card {
-        flex: 1;
-        padding: 50px 40px;    /* 增加內部空間，讓標題與內容不擁擠 */
+        flex: 1 1 0;          /* 這是關鍵：強制兩個框框平分剩餘空間，寬度絕對一致 */
+        width: 0;             /* 防止內容撐開導致寬度不一 */
+        padding: 50px 40px;
         border: 1px solid #e1e4e8;
-        border-radius: 20px;   /* 更圓潤的轉角 */
+        border-radius: 20px;
         background-color: #ffffff;
         text-align: center;
         text-decoration: none !important;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 380px;     /* 增加框框的基本高度 */
+        min-height: 380px;
         transition: all 0.3s ease;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* 更柔和的陰影 */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
     
     .card:hover {
-        transform: translateY(-10px); /* 懸停時浮起更高 */
+        transform: translateY(-10px);
         box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         border-color: #007bff;
     }
 
-    /* 標題字體加大 */
+    /* 文字樣式優化 */
     .card-title { 
         font-size: 2em; 
         font-weight: bold; 
         color: #007bff; 
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         display: block;
+        white-space: nowrap; /* 避免標題換行擠壓空間 */
     }
     
-    /* 描述文字加大 */
     .card-desc { 
-        font-size: 1.2em; 
+        font-size: 1.15em; 
         color: #444; 
         margin-bottom: 40px; 
-        line-height: 1.7;
+        line-height: 1.6;
+        word-wrap: break-word; /* 確保長文字會自動折行而不撐開框框 */
     }
 
-    /* 5. 強化版藍色按鈕 */
+    /* 5. 按鈕樣式 */
     .btn-ui {
         display: inline-block;
         padding: 15px 0;
@@ -75,11 +76,6 @@ layout: default
         font-weight: bold;
         font-size: 1.2em;
         text-decoration: none !important;
-        transition: background 0.2s;
-    }
-    .btn-ui:hover {
-        background-color: #0056b3;
-        box-shadow: 0 4px 12px rgba(0,123,255,0.3);
     }
 </style>
 
