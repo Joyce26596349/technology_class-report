@@ -3,10 +3,10 @@ layout: default
 ---
 
 <style>
-    /* 1. 徹底隱藏右側側邊欄與頁尾資訊 */
-    aside#sidebar, footer { display: none !important; }
+    /* 1. 隱藏 Architect 主題原本的右側側邊欄與頁尾 */
+    aside#sidebar, footer, .view { display: none !important; }
     
-    /* 2. 讓主內容區域滿版，解決右邊空洞問題 */
+    /* 2. 讓內容區域滿版顯示，解決右邊空洞 */
     section#main_content { 
         width: 100% !important; 
         max-width: 1000px !important; 
@@ -14,41 +14,62 @@ layout: default
         float: none !important; 
     }
 
-    /* 3. 按鈕容器：改為 Flex 並排 */
+    /* 3. 按鈕容器：改為 Flex 佈局實現並排 */
     .card-container {
         display: flex;
         gap: 20px;
-        margin-top: 30px;
+        margin: 30px 0;
         flex-wrap: wrap; /* 手機版會自動換行 */
+        justify-content: space-between;
     }
 
-    /* 4. 按鈕卡片樣式 */
+    /* 4. 重新定義卡片樣式，解決截圖中白塊縮小的問題 */
     .card {
-        flex: 1; /* 平分寬度 */
-        min-width: 300px;
-        padding: 30px;
+        flex: 1; 
+        min-width: 320px; /* 確保並排時有足夠寬度 */
+        padding: 30px 20px;
         border: 1px solid #e1e4e8;
         border-radius: 12px;
         background-color: #ffffff;
         text-align: center;
         text-decoration: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         transition: transform 0.2s, box-shadow 0.2s;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        color: #24292e !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
+    
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.1);
     }
-    .card-title { display: block; font-size: 1.6em; font-weight: bold; color: #007bff; margin-bottom: 10px; }
-    .card-desc { display: block; font-size: 1em; color: #586069; margin-bottom: 25px; min-height: 3em; }
+
+    .card-title { 
+        font-size: 1.5em; 
+        font-weight: bold; 
+        color: #007bff; 
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .card-desc { 
+        font-size: 0.95em; 
+        color: #586069; 
+        margin-bottom: 25px; 
+        line-height: 1.5;
+        min-height: 3em; /* 讓兩個卡片描述高度一致 */
+    }
+
     .btn-ui {
-        display: inline-block;
-        padding: 10px 40px;
+        padding: 10px 35px;
         background-color: #007bff;
         color: white !important;
         border-radius: 6px;
         font-weight: bold;
+        text-decoration: none !important;
     }
 </style>
 
