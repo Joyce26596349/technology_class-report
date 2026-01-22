@@ -23,6 +23,7 @@ layout: default
 # 工程專題期中報告 MATLAB程式設計
 ## 前言
 <details open>
+    
 <summary>展開</summary>
 本三次實驗結合了matlab和生程式AI的運用，並適用在實體應用上，此實驗不僅能將程式運用在現實生活當中，還能比較不同AI對於程式的理解和表現的差異
 這次的課程中有ch07握把式圖形與GUI設計、ch08二維圖形、ch09三維圖形、ch11多項式
