@@ -22,8 +22,12 @@ layout: default
 
 # 臺北市私立薇閣高級中學 114 學年度第 1 學期 工程專題
 ## 一、主題:
+
 <details open>
-<summary>展開</summary>
+<summary>
+    
+    展開
+</summary>
 目標為使用 matlab 中 deep network designer 的 sqeezenet 與 alexnet 並判斷出天空中不同雲朵的類型,我蒐集了許多常見的雲朵照,包含卷雲(cirrus)、積雲(cumulus)、層雲(stratus),並進階轉換成相同格式與檔名,再調整訓練參數,訓練完後給他辨識和給的資料不一樣的圖,讓他分類與測試信心度,本次實驗希望可以將 AI 科技與地球科學結合,並讓天氣系統更好的利用雲朵自動預判天氣狀況。
 
 | SqueezeNet | AlexNet |
@@ -33,8 +37,12 @@ layout: default
 </details>
 
 ## 二、收集資料：
+
 <details>
-<summary>展開</summary>
+<summary>
+    
+    展開
+</summary>
 資料預處理+格式轉換 <img src="https://github.com/user-attachments/assets/0b95287e-81e0-4f3f-8119-3beed4750a6d" width="100"> 選擇批次轉換
 
 | 將詢問改為取代並選擇資料夾 | 加入轉換為全彩、調整大小將寬度與高度調成227 | 全選並選擇批次重新命名並更改命名範本、勾選副檔名 |
@@ -43,8 +51,12 @@ layout: default
 </details>
 
 ## 三、建立模型挖掘資料：
+
 <details>
-  <summary>展開</summary>
+  <summary>
+      
+      展開
+</summary>
 <table style="width: 100%; table-layout: auto;">
   <tr align="center">
     <th width="10%">項目</th>
@@ -125,8 +137,12 @@ layout: default
 
 
 ## 四、實驗結果
+
 <details>
-  <summary>展開</summary>
+  <summary>
+      
+      展開
+</summary>
   預測類別程式
 
   ```cpp
@@ -140,8 +156,12 @@ title(string(label) + ", " + num2str(100*max(probs),3) + "%"); // 顯示類別�
 
 ```
 實驗皆成功
+
 <details>
-<summary> 展開圖片成果 </summary>
+<summary> 
+    
+    展開圖片成果
+</summary>
                    
 |SqueezeNet|AlexNet|
 |:--:|:--:|
@@ -157,15 +177,23 @@ title(string(label) + ", " + num2str(100*max(probs),3) + "%"); // 顯示類別�
 </details>
 
 ## 五、實驗結果討論
+
 <details>
-  <summary>展開</summary>
+  <summary>
+      
+      展開
+</summary>
   在這次的實驗中，SqueezeNet和Alexnet都訓練模型能夠成功辨識卷雲、積雲與層雲且信心度差不多，並以極高的信心度顯示出正確的答案，代表兩者在小型資料集下仍能展現良好的分類能力，但因為選取訓練資料時是用人工選取且資料僅有 40 張，數量偏少，我又不認識各種的雲，因此選取的都是較有該雲朵特徵的圖來做訓練與判斷，相似度較高，導致訓練成果信心度較高，若遇到更複雜或混合型的雲朵影像，模型可能會出現誤判的情形，本次實驗驗證CNN可以做影像的分類，可以透過圖片的特徵來判斷分類，並有很高的信心度。
 
 </details>
 
 ## 六、心得感想
+
 <details>
-  <summary>展開</summary>
+  <summary>
+      
+      展開
+</summary>
   本次的訓練使用matlab中內建app (Deep Network Designer)內的Squeezenet與alexnet卷積神經網路(CNN)，先下載圖片，並批次轉換成同類型的圖片與大小，接下來打開Deep Network Designer中的Squeezenet，在data中匯入要訓練的資料庫，我所選擇的有40張，若其中圖片有格式不正確的就無法計入其中，無法匯入，在data中的value數字為training option中要更改的MiniBatchSize（小批量大小），我的結果為28，在training option中要更改的還有ValidationFrequency，更改為類別數，MaxEporchs為完整重複的訓練次數，我調整成8，接下來更改designer中的conv/fc的參數，將NumFilters改成有的類別數量，將WeightLearnRateFactor(權重學習率因子)調成10讓他更快，將BiasLearnRateFactor(偏重學習率因子)調成10，與權重學習率因子相同，接下來就可以訓練了。
 在尋找圖片時使用google圖片搜尋雲朵類型，我發現google查詢內容常常是依照各網站有這個單詞的圖片來顯示，所以我在查詢這三種圖片時常找到同一張圖片，因此必須人工選取符合分類的照片，在使用圖片助手批量圖片下載器時，我選好了圖片並點選下載選中，他卻幫我下載所有的圖片，經過多次摸索以後，必須要先按保留選中，將不要的刪掉，下載才會是我需要的圖片。
 天空中的雲朵曾不能以一瞬，雲朵形狀依天氣氣流、形成高度、氣溫、濕度、等條件的不同而變成不同的形狀，因此選取主題時是想讓AI幫我判斷雲朵類型，因為我看不出天空中各個雲朵是什麼雲，在篩選google圖片時只能利用大致雲朵類型的形狀來決定要不要選擇類似圖片，所以圖庫中的雲朵可能較相似，讓AI比較好判斷類型以及給出較高的信心度，造成我給他判斷的圖片都是回答成功的且判斷率也相當的高。
